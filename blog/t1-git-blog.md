@@ -1,4 +1,4 @@
-Week 1 Technical Blog
+### Week 1 Technical Blog
 
 Or how version control, git and GitHub make your life easier through tracking
 
