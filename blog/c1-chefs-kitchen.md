@@ -1,6 +1,10 @@
-Cultural Blog Week 1
+### Cultural Blog Week 1
+
+---
 
 Sunday, Nov 2, 2014
+
+---
 
 The values and approaches that DBC takes really resonate with my views on learning. My favorite quote of the video was "Whatever happened was due to us." This really gives me a sense of being open to create, explore and expirement. Combine that with the communal learning environment and I can see the potential for a massively transformational experience. I am excited to immerse myself into this culture.
 

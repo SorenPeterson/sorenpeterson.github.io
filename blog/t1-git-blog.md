@@ -1,8 +1,12 @@
 ### Week 1 Technical Blog
 
-Or how version control, git and GitHub make your life easier through tracking
+# Or how version control, git and GitHub make your life easier through tracking
+
+---
 
 Sunday, Nov 2, 2014
+
+---
 
 Version control systems are (or should be) the backbone of any great software project. They automate many tasks pertaining to the development of a piece of software. There are great benefits as both an individual and as a team. Version control system's allow the tracking of changes in code. With version control you can revert to a previous version if something becomes broken. We can also create separate instances of our code to work on new features. When the features are readyc the code can integrated back into the main project. If the code is hosted on a server it can be downloaded by any team member from anywhere. This simplifies the sharing of code and guarantees everyone is working off of the same copy.
 
