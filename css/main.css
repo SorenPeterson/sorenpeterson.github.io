@@ -1,0 +1,78 @@
+/*Color orange #EDA540  blue #4088ED */
+
+#container {
+  width: 800px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+  margin: 50px 0;
+}
+
+#logo {
+  width: 800px;
+  border-radius: 50px;
+}
+
+#navbar {
+  text-align: center;
+}
+
+#navbar ul {
+  padding: 0;
+}
+
+#navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+#navbar li {
+  display: inline;
+  padding: 5px 15px;
+  margin: 10px;
+}
+
+#navbar li:hover {
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
+#content {
+  overflow: auto;
+  margin: 50px 0;
+}
+
+.section {
+  width: 500px;
+  float: left;
+  margin: 25px;
+}
+
+.aside {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 25px;
+  width: 182px;
+  float: right;
+}
+
+.aside img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+#footer {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  clear: both;
+}
+
+a {
+  color: #4088ED;
+  text-decoration: none;
+}
