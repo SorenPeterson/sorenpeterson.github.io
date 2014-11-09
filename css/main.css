@@ -57,6 +57,7 @@
   margin: 25px;
   width: 182px;
   float: right;
+  clear: right;
 }
 
 .aside img {
