@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  </head>
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <img id="logo" src="/img/logo.jpg" alt="logo">
+        <div id="navbar">
+          <ul>
+            <a href="/index.html"><li>Home</li></a>
+            <a href="/blog/index.html"><li>Blog</li></a>
+            <a href="/index.html"><li>Portfolio</li></a>
+            <a href="/index.html"><li>About/Contact</li></a>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content">
+        <div class="section">
+          <center>
+            <h2>Ruby Enumerables and the Map Method</h2>
+            <h6>Nov.23.2014</h6>
+          </center>
+          <p>This week we learned a lot about ruby. In ruby there are many methods that help us manipulate our data into what we want. Methods are descriptions of processes to modify data. Depending on the type of data, different methods are needed. Some data, or variables, might be numbers or strings of characters or and object. Some variables might be a collection of other variables or objects. It is these collections of other variables that we label enumerables.</p>
+          <p>Enumerable variables can be iterated through, mentioning each object contained. We can then perform the method call on each object in combination with a block of code to modify it's value. The method map iterates through an entire enumerable and replaces each item with the value returned by the block of code.</p>
+          <h5>Example:</h5>
+          <code>biggest_fish_ive_ever_caught = [3, 39, 20] # I have caught a 3" fish, a 39" fish and a 20" fish</code>
+          <code>biggest_fish_ive_ever_caught.map! do |size| # Go through every fish size and assign a new value based on block</code>
+          <code>  size *= 2 # Multiply the size by two. (Implicit return)</code>
+          <code>end</code>
+          <code>puts "I swear. I caught a fish that was #{biggest_fish_ive_ever_caught[random(3)]} inches long"</code>
+        </div>
+        <div class="aside">
+          <img src="/img/me.jpg"/>
+          <p>Hello. My name is Soren. I like to make things.</p>
+          <a href="https://www.facebook.com/soren.peterson.39">facebook</a>
+          <a href="https://www.twitter.com/soren468">twitter</a>
+          <a href="https://www.quora.com/Soren-Peterson-2">quora</a>
+          <a href="https://github.com/soren468">github</a>
+          <a href="https://www.linkedin.com/pub/soren-peterson/99/762/329">linkedin</a>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>Copyright &copy; Soren Peterson 2014</p>
+      </div>
+
+    </div>
+  </body>
+</html>
