@@ -29,11 +29,13 @@
           <p>This week we learned a lot about ruby. In ruby there are many methods that help us manipulate our data into what we want. Methods are descriptions of processes to modify data. Depending on the type of data, different methods are needed. Some data, or variables, might be numbers or strings of characters or and object. Some variables might be a collection of other variables or objects. It is these collections of other variables that we label enumerables.</p>
           <p>Enumerable variables can be iterated through, mentioning each object contained. We can then perform the method call on each object in combination with a block of code to modify it's value. The method map iterates through an entire enumerable and replaces each item with the value returned by the block of code.</p>
           <h5>Example:</h5>
-          <code>biggest_fish_ive_ever_caught = [3, 39, 20] # I have caught a 3" fish, a 39" fish and a 20" fish</code>
-          <code>biggest_fish_ive_ever_caught.map! do |size| # Go through every fish size and assign a new value based on block</code>
-          <code>  size *= 2 # Multiply the size by two. (Implicit return)</code>
-          <code>end</code>
-          <code>puts "I swear. I caught a fish that was #{biggest_fish_ive_ever_caught[random(3)]} inches long"</code>
+          <code>
+            <p>biggest_fish_ive_ever_caught = [3, 39, 20] # I have caught a 3" fish, a 39" fish and a 20" fish</p>
+            <p>biggest_fish_ive_ever_caught.map! do |size| # Go through every fish size and assign a new value based on block</p>
+              <p>size *= 2 # Multiply the size by two. (Implicit return to map)</p>
+            <p>end</p>
+            <p>puts "I swear. I caught a fish that was #{biggest_fish_ive_ever_caught[random(3)]} inches long"</p>
+          </code>
         </div>
         <div class="aside">
           <img src="/img/me.jpg"/>
