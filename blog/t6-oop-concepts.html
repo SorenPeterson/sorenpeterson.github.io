@@ -4,8 +4,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-
-    <title>Blog</title>
   </head>
   <body>
     <div id="container">
@@ -24,17 +22,13 @@
 
       <div id="content">
         <div class="section">
-          <a href="c1-chefs-kitchen.html"><h1>Chefs in the Kitchen</h1></a>
-          <a href="t1-git-blog.html"><h1>Git Bloggin</h1></a>
-          <a href="t2-css-design.html"><h1>Designing with CSS</h1></a>
-          <a href="t3-arrays-hashes.html"><h1>Arrays and Hashes</h1></a>
-          <a href="c3-thinking-style.html"><h1>Thinking Styles</h1></a>
-          <a href="t4-enumerable-methods.html"><h1>Enumerables and methods</h1></a>
-          <a href="c4-tech-issues.html"><h1>Tech Issues</h1></a>
-          <a href="t5-ruby-classes.html"><h1>Ruby Classes</h1></a>
-          <a href="c5-feedback.html"><h1>Feedback</h1></a>
-          <a href="t6-oop-concepts.html"><h1>Oop Concepts</h1></a>
-          <a href="c6-stereotype-threat.html"><h1>Stereotype Threat</h1></a>
+          <center><h2>Class Methods</h2>
+          <h6>Dec.8.2014</h6></center>
+          <p>In ruby, classes can have two types of methods. There are instance methods and class methods. Instance methods are the most common type. In order to use an instance method you must first create an instance of the class. Then you can call the method on the class and it will use variables associated with that instance. The other type of method is called a class method. Class methods don't need an instance of the class to be used. Instead, you can call them directly on the class. It would follow as such that instance variables are inaccessible to class methods. However, they can access class variables.</p>
+          <pre><code>my_array = Array.new([1, 2, 3]) # new is a class method which we can call on the class Array
+my_array.upcase # upcase is an instance method which we can call on the instance my_array
+my_array.new # This is invalid. Class variables can't be called on instances
+          </pre></code>Array.upcase # This is also invalid. Instance methods can't be called on classes
         </div>
         <div class="aside">
           <img src="/img/me.jpg"/>
