@@ -1,0 +1,56 @@
+body {
+  font-family: ComicSansMS;
+}
+
+#title {
+  font-size: 2em;
+  background-color: salmon;
+  margin: 50px;
+  padding: 25px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+#frame {
+  background-color: salmon;
+  width: 400px;
+  height: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 30px;
+  border: 1px solid black;
+  position: relative;
+}
+
+#platypus {
+  position: absolute;
+  width: 80px;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+
+#evilhorseman {
+  position: absolute;
+  width: 70px;
+  top: 375px;
+  left: 375px;
+  z-index: 2;
+}
+
+.doge {
+  position: absolute;
+  width: 80px;
+  top: 15px;
+  left: 15px;
+  z-index: 0;
+}
+
+#winner {
+  max-width: 100%;
+}
+
+#loser {
+  max-width: 100%;
+}
