@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <title>OtterHive</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
-    <div id="container">
-
-      <div id="header">
-        <img id="logo" src="/img/logo.jpg" alt="logo">
-        <div id="navbar">
-          <ul>
-            <a href="/index.html"><li>Home</li></a>
-            <a href="/blog/index.html"><li>Blog</li></a>
-            <a href="/index.html"><li>Portfolio</li></a>
-            <a href="/index.html"><li>About/Contact</li></a>
-          </ul>
-        </div>
+    <header>
+      <div id="navigation">
+        <a href="/"><h3>OtterHive</h3></a>
+        <a href="/portfolio/"><h3 id="navigation-portfolio">Portfolio</h3></a>
+        <a href="/apps/"><h3 id="navigation-apps">Apps</h3></a>
+        <a href="/projects/"><h3 id="navigation-projects">Projects</h3></a>
+        <a href="/free/"><h3 id="navigation-free">Free Stuff</h3></a>
       </div>
+    </header>
 
-      <div id="content">
-        <div class="section">
-          <center><h2>Designing with CSS</h2>
+    <content>
+      <div>
+        <center><h2>Designing with CSS</h2>
           <h3>Because it's basically the only option</h3>
           <h6>11.9.14</h6></center>
           <p>Margin, border and padding make up what is know as the box model. The box model refers to the space in and around the element. At the very center there is the content. This can be anything from text and images to entire divs. The next layer is the padding. The padding is the amount of space around the content. Background colors will be applied to the padding. This is the main function of padding. When creating a button you could add more padding to make the button bigger but keep the text the same size. Wrapped around the padding is the border. The border is a line or border image that wraps around the element. Some common borders are solid, dashed and dotted lines. One could also use a specially formatted image to create a really fancy border around their element. The last and outermost layer is the margin. This is the space between the element and other elements. By setting a margin you can push the element away from others.</p>
           <p>Classes and ID's are used to select specific html elements to apply styles to. A class and an id are very similar in that they both allow us to set special names to access our elements. The difference between the two is that while we can have as many elements of a certain class type as we want we can only have one element of a certain id type. Classes are good for commonly recurring elements such as buttons. Id's are good for major structural elements like headers or other unique elements like navbars. One important thing to note is that an element can have both a class and an id specified. It will inherit styling from both.</p>
           <p>CSS positioning allows us to place our HTML elements exactly where we want to. Relative positiong places the element relative to where it would normally be placed. Use it with a :hover for a cool effect like the button is being pressed. Absolute positioning allows to place the element exactly based on the document. The element will still scroll though. Fixed positioning fixes the element to the browser window. When you scroll the element will not move.</p>
           <p>Elements in html can display themselves in a few different ways. There are inline elements and block elements. Inline elements fall into the flow of content naturally. Their size is determined by their contents. It is as such that inline elements are usually the content. Block elements display on their own line. They will not flow with other inline elements. Blocks can be given a size and easily positioned. Blocks are thusly suited for containing content. There is also a type called inline-block. Inline blocks flow with other inline elements but they can retain their sizing property's.</p>
-        </div>
-        <div class="aside">
-          <img src="/img/me.jpg"/>
-          <p>Hello. My name is Soren. I like to make things.</p>
-          <a href="https://www.facebook.com/soren.peterson.39">facebook</a>
-          <a href="https://www.twitter.com/soren468">twitter</a>
-          <a href="https://www.quora.com/Soren-Peterson-2">quora</a>
-          <a href="https://github.com/soren468">github</a>
-          <a href="https://www.linkedin.com/pub/soren-peterson/99/762/329">linkedin</a>
-        </div>
       </div>
+    </content>
 
-      <div id="footer">
-        <p>Copyright &copy; Soren Peterson 2014</p>
-      </div>
-
-    </div>
+    <footer>
+    </footer>
   </body>
 </html>

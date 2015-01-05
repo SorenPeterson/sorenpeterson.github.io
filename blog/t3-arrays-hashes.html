@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <title>OtterHive</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
-    <div id="container">
-
-      <div id="header">
-        <img id="logo" src="/img/logo.jpg" alt="logo">
-        <div id="navbar">
-          <ul>
-            <a href="/index.html"><li>Home</li></a>
-            <a href="/blog/index.html"><li>Blog</li></a>
-            <a href="/index.html"><li>Portfolio</li></a>
-            <a href="/index.html"><li>About/Contact</li></a>
-          </ul>
-        </div>
+    <header>
+      <div id="navigation">
+        <a href="/"><h3>OtterHive</h3></a>
+        <a href="/portfolio/"><h3 id="navigation-portfolio">Portfolio</h3></a>
+        <a href="/apps/"><h3 id="navigation-apps">Apps</h3></a>
+        <a href="/projects/"><h3 id="navigation-projects">Projects</h3></a>
+        <a href="/free/"><h3 id="navigation-free">Free Stuff</h3></a>
       </div>
+    </header>
 
-      <div id="content">
-        <div class="section">
-          <center><h2>Arrays and Hashes</h2>
-          <h3>or how to hold all of your things. correctly.</h3>
-          <h6>11.15.14</h6></center>
-          <p>In ruby we have containers for our data. We can store just about anything we want in these containers. We can store numbers, letters, words or even a digital representation of a frog. We call these containers variables. Variable contain values. Sometimes storing only one value in our variable is just fine. Maybe we only need Steve the frog or Margaret the badger. But what about when we need to store steve and his whole family? We can use either arrays or hashes to store multiple values. Both arrays and hashes are actually values of variables. They are unique from other possible values though in that they contain other values.</p>
-          <p>Arrays can contain as many values as you want and of any type. They can even contain other arrays. Arrays are ordered which means that the elements inside each have a specific number associated with them. This number represents their place in the array. You can think of it like a numbered list. One important thing to note is that arrays start counting at 0. So if you have 5 items in array they would be numbered 0, 1, 2, 3 and 4. To access these items you pass in the corresponding number. You can read and write values to any of these places. Arrays are great for lists, both unordered and ordered.</p>
-          <p>Hashes are very similar to arrays in that we can store many values and those values can be anything we want. The main difference is in how we access those values. When using an array we access elements by their corresponding place value. When accessing the value of a hash you use a different value. This identifier is called a key. Your key can be anything you want it be, just like the value that it's associated with. There is no concept of order in a hash. Instead, we rely completely on the keys to access the values. We often call this concept a key value pair. This pair contains the key and the value contained in the hash corresponding with that key. Hashes are great for times when don't necessarily care what order things are in. But more specifically you want to use a hash when you need store a value based on some other value. Hashes are a lot like dictionaries. A dictionary has a word (which is the key) followed by the definition and some other info (which is the value). It wouldn't make sense to store a dictionary in a hash because if we wanted the definition of a specific word we would have to either know off hand or look up the place that it's definition was stored at. That's super unintuitive. It's much easier to just reference it by the word itself.</p>
-        </div>
-        <div class="aside">
-          <img src="/img/me.jpg"/>
-          <p>Hello. My name is Soren. I like to make things.</p>
-          <a href="https://www.facebook.com/soren.peterson.39">facebook</a>
-          <a href="https://www.twitter.com/soren468">twitter</a>
-          <a href="https://www.quora.com/Soren-Peterson-2">quora</a>
-          <a href="https://github.com/soren468">github</a>
-          <a href="https://www.linkedin.com/pub/soren-peterson/99/762/329">linkedin</a>
-        </div>
+    <content>
+      <div>
+        <center><h2>Arrays and Hashes</h2>
+        <h3>or how to hold all of your things. correctly.</h3>
+        <h6>11.15.14</h6></center>
+        <p>In ruby we have containers for our data. We can store just about anything we want in these containers. We can store numbers, letters, words or even a digital representation of a frog. We call these containers variables. Variable contain values. Sometimes storing only one value in our variable is just fine. Maybe we only need Steve the frog or Margaret the badger. But what about when we need to store steve and his whole family? We can use either arrays or hashes to store multiple values. Both arrays and hashes are actually values of variables. They are unique from other possible values though in that they contain other values.</p>
+        <p>Arrays can contain as many values as you want and of any type. They can even contain other arrays. Arrays are ordered which means that the elements inside each have a specific number associated with them. This number represents their place in the array. You can think of it like a numbered list. One important thing to note is that arrays start counting at 0. So if you have 5 items in array they would be numbered 0, 1, 2, 3 and 4. To access these items you pass in the corresponding number. You can read and write values to any of these places. Arrays are great for lists, both unordered and ordered.</p>
+        <p>Hashes are very similar to arrays in that we can store many values and those values can be anything we want. The main difference is in how we access those values. When using an array we access elements by their corresponding place value. When accessing the value of a hash you use a different value. This identifier is called a key. Your key can be anything you want it be, just like the value that it's associated with. There is no concept of order in a hash. Instead, we rely completely on the keys to access the values. We often call this concept a key value pair. This pair contains the key and the value contained in the hash corresponding with that key. Hashes are great for times when don't necessarily care what order things are in. But more specifically you want to use a hash when you need store a value based on some other value. Hashes are a lot like dictionaries. A dictionary has a word (which is the key) followed by the definition and some other info (which is the value). It wouldn't make sense to store a dictionary in a hash because if we wanted the definition of a specific word we would have to either know off hand or look up the place that it's definition was stored at. That's super unintuitive. It's much easier to just reference it by the word itself.</p>
       </div>
+    </content>
 
-      <div id="footer">
-        <p>Copyright &copy; Soren Peterson 2014</p>
-      </div>
-
-    </div>
+    <footer>
+    </footer>
   </body>
 </html>

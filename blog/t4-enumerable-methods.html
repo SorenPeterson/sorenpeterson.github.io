@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <title>OtterHive</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
-    <div id="container">
-
-      <div id="header">
-        <img id="logo" src="/img/logo.jpg" alt="logo">
-        <div id="navbar">
-          <ul>
-            <a href="/index.html"><li>Home</li></a>
-            <a href="/blog/index.html"><li>Blog</li></a>
-            <a href="/index.html"><li>Portfolio</li></a>
-            <a href="/index.html"><li>About/Contact</li></a>
-          </ul>
-        </div>
+    <header>
+      <div id="navigation">
+        <a href="/"><h3>OtterHive</h3></a>
+        <a href="/portfolio/"><h3 id="navigation-portfolio">Portfolio</h3></a>
+        <a href="/apps/"><h3 id="navigation-apps">Apps</h3></a>
+        <a href="/projects/"><h3 id="navigation-projects">Projects</h3></a>
+        <a href="/free/"><h3 id="navigation-free">Free Stuff</h3></a>
       </div>
+    </header>
 
-      <div id="content">
-        <div class="section">
-          <center>
+    <content>
+      <div>
+        <center>
             <h2>Ruby Enumerables and the Map Method</h2>
             <h6>Nov.23.2014</h6>
           </center>
@@ -35,23 +34,10 @@
               <p>size *= 2 # Multiply the size by two. (Implicit return to map)</p>
             <p>end</p>
             <p>puts "I swear. I caught a fish that was #{biggest_fish_ive_ever_caught[random(3)]} inches long"</p>
-          </code>
-        </div>
-        <div class="aside">
-          <img src="/img/me.jpg"/>
-          <p>Hello. My name is Soren. I like to make things.</p>
-          <a href="https://www.facebook.com/soren.peterson.39">facebook</a>
-          <a href="https://www.twitter.com/soren468">twitter</a>
-          <a href="https://www.quora.com/Soren-Peterson-2">quora</a>
-          <a href="https://github.com/soren468">github</a>
-          <a href="https://www.linkedin.com/pub/soren-peterson/99/762/329">linkedin</a>
-        </div>
-      </div>
+          </code>      </div>
+    </content>
 
-      <div id="footer">
-        <p>Copyright &copy; Soren Peterson 2014</p>
-      </div>
-
-    </div>
+    <footer>
+    </footer>
   </body>
 </html>
