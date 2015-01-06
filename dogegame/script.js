@@ -3,6 +3,13 @@ numDoges = 4
 
 // Setup the game. Will clear everything and place new characters
 function gameSetup() {
+  // clear horseman interval
+  if(typeof evilHorseMan !== 'undefined') {
+    if(evilHorseMan.interval !== 0) {
+      clearInterval(evilHorseMan.interval);
+    }
+  }
+
   document.getElementById("frame").innerHTML = "";
 
   doges = [];
@@ -135,14 +142,12 @@ function gameSetup() {
 
 // This function stops the game and displays the game over page
 function gameOver() {
-  clearInterval(evilHorseMan.interval);
-  document.getElementById("frame").innerHTML = '<center><img id="loser" src="loser.gif" onClick="gameSetup();"/><h2>Click image to replay</h2></center>';
+  document.getElementById("frame").innerHTML = '<center><img id="loser" src="loser.gif"/><h2>Click image to replay</h2></center>';
 }
 
 // This function stop the game and displays the winner page
 function gameWon(score) {
-  clearInterval(evilHorseMan.interval)
-  document.getElementById("frame").innerHTML = '<center><img id="winner" src="winner.jpg" onClick="gameSetup();"/><h2>Score: ' + score + '<br/>Click image to replay</h2></center>';
+  document.getElementById("frame").innerHTML = '<center><img id="winner" src="winner.jpg"/><h2>Score: ' + score + '<br/>Click image to replay</h2></center>';
 }
 
 // This adds the event listener to track keystroke activity
