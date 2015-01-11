@@ -4,32 +4,21 @@ title: Blog
 
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
-    {% include header.html %}
+    {% include head.html %}
+    <body>
+        {% include header.html %}
 
-    <content>
-      <div>
-        <a href="c1-chefs-kitchen.html"><h1>Chefs in the Kitchen</h1></a>
-        <a href="t1-git-blog.html"><h1>Git Bloggin</h1></a>
-        <a href="t2-css-design.html"><h1>Designing with CSS</h1></a>
-        <a href="t3-arrays-hashes.html"><h1>Arrays and Hashes</h1></a>
-        <a href="c3-thinking-style.html"><h1>Thinking Styles</h1></a>
-        <a href="t4-enumerable-methods.html"><h1>Enumerables and methods</h1></a>
-        <a href="c4-tech-issues.html"><h1>Tech Issues</h1></a>
-        <a href="t5-ruby-classes.html"><h1>Ruby Classes</h1></a>
-        <a href="c5-feedback.html"><h1>Feedback</h1></a>
-        <a href="t6-oop-concepts.html"><h1>Oop Concepts</h1></a>
-        <a href="c6-stereotype-threat.html"><h1>Stereotype Threat</h1></a>
-        <a href="t7-javascript.html"><h1>JavaScript</h1></a>
-        <a href="c7-values.html"><h1>Values</h1></a>
-        <a href="t8-tech.html"><h1>Tech</h1></a>
-        <a href="c8-conflict.html"><h1>Conflict</h1></a>
-        <a href="c9-questions.html"><h1>Questions</h1></a>
-      </div>
-    </content>
+        <content>
+            <div>
+                {% for post in site.posts %}
+                    <h2>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    <h2>
+                {% endfor %}
+            </div>
+        </content>
 
-    <footer>
-    </footer>
-  </body>
+        <footer>
+        </footer>
+    </body>
 </html>
