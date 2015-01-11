@@ -44,19 +44,19 @@ function gameSetup() {
         this.location[1] += 1;
       if(platypus.location[1] < this.location[1])
         this.location[1] -= 1;
-      // Attack anything in the nearby vicinity!
-      this.attack();
       // Update the horses image location on the screen
       document.getElementById("evilhorseman").style.top = String(15 + (40*this.location[1])) + "px";
       document.getElementById("evilhorseman").style.left = String(15 + (40*this.location[0])) + "px";
-    },
+      // Attack anything in the nearby vicinity!
+      this.attack();
+      },
 
     // Attack anything in the nearby vicinity!
     attack: function() {
       // Check every doge...
       for(var i = 0; i < doges.length; i++) {
         // If horse is on top of doge, turn doge to ash
-        if(doges[i].location[0] === this.location[0] && doges[i].location[1] === this.location[1]) {
+        if(doges[i].location[0] === this.location[0] && doges[i].location[1] === this.location[1] && !doges[i].isSaved) {
           doges[i].isAlive = false;
           document.getElementById("doge" + i).src = "ash.png"
         }
@@ -137,17 +137,24 @@ function gameSetup() {
   document.getElementById("frame").innerHTML += '<img id="platypus" src="platypus.png"/>';
 
   // Setup the interval to move the horse once every second
-  evilHorseMan.interval = setInterval(function() {evilHorseMan.move()}, 1000);
+  evilHorseMan.interval = setInterval(function() {evilHorseMan.move()}, 500);
+
+  gameStartTime = new Date();
 }
 
 // This function stops the game and displays the game over page
 function gameOver() {
+  clearInterval(evilHorseMan.interval);
   document.getElementById("frame").innerHTML = '<center><img id="loser" src="loser.gif"/><h2>Click image to replay</h2></center>';
 }
 
 // This function stop the game and displays the winner page
 function gameWon(score) {
-  document.getElementById("frame").innerHTML = '<center><img id="winner" src="winner.jpg"/><h2>Score: ' + score + '<br/>Click image to replay</h2></center>';
+  elapsedTime = new Date() - gameStartTime;
+  seconds = (Math.floor(elapsedTime/100)%60)/10;
+
+  clearInterval(evilHorseMan.interval);
+  document.getElementById("frame").innerHTML = '<center><img id="winner" src="winner.jpg"/><h2>Your score was ' + score + ' and it took you ' + seconds + ' seconds.</h2><h2>Click to replay</h2></center>';
 }
 
 // This adds the event listener to track keystroke activity
