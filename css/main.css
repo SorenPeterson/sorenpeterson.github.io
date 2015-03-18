@@ -1,9 +1,16 @@
+/* Header */
+
+header {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: white;
+}
+
 /* Navigation */
 
 #navigation {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  float: left;
   margin: 10px;
   font-size: 30px;
 }
@@ -12,18 +19,10 @@
   display: inline-block;
 }
 
-.navigation-item a {
-  text-decoration: none;
-  color: blue;
-  margin: 0;
-}
-
 /* Social Links */
 
 #social-links {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  float: right;
   margin: 10px;
 }
 
@@ -48,6 +47,24 @@
   font-size: 25pt;
 }*/
 
+/* Portfolio */
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.portfolio-list ul {
+  list-style-type: none;
+}
+
+.portfolio-list li {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px gray;
+}
+
 /* Helpers */
 
 body {
@@ -56,4 +73,9 @@ body {
 
 .clrboth {
   clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #58A1D1;
 }
