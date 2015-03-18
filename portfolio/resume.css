@@ -12,8 +12,7 @@ body {
     height: 11in;
     box-shadow: 10px 10px 10px gray;
     border: 1px solid black;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto;
     padding: 10px;
   }
 }
