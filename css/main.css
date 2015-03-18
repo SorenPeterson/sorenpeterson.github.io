@@ -1,0 +1,59 @@
+/* Navigation */
+
+#navigation {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.navigation-item {
+  display: inline-block;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: blue;
+  margin: 0;
+}
+
+/* Social Links */
+
+#social-links {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+.social-icon {
+  width: 40px;
+}
+
+/* Front Page */
+
+.front-page-heading {
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.front-page-heading h1 {
+  margin: 0;
+  font-size: 100pt;
+}
+
+/*.front-page-heading p {
+  margin: 0;
+  font-size: 25pt;
+}*/
+
+/* Helpers */
+
+body {
+  font-family: 'Lora', serif;
+}
+
+.clrboth {
+  clear: both;
+}

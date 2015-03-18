@@ -1,3 +1,34 @@
+/* Font */
+
 body {
   font-family: 'Lora', serif;
 }
+
+/* Displaying it nice */
+
+@media not print {
+  .container {
+    width: 8.5in;
+    height: 11in;
+    box-shadow: 10px 10px 10px gray;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+  }
+}
+
+/* Name */
+
+h1.name {
+  margin: 0;
+  text-align: center;
+}
+
+/* Contact Information */
+
+p.contact-information {
+  margin: 0;
+  text-align: center;
+}
+
