@@ -61,8 +61,6 @@ header {
 .portfolio-list li {
   margin: 20px;
   padding: 10px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px gray;
 }
 
 /* Helpers */
