@@ -65,6 +65,7 @@ header {
 
 .portfolio-sample {
   float: right;
+  width: 200px;
 }
 
 /* Helpers */
