@@ -5,6 +5,27 @@ body {
   font-size: 10pt;
 }
 
+/* Download Button */
+
+.button {
+  box-shadow: 0 5px 20px gray;
+  padding: 10px;
+  display: inline-block;
+  background-color: white;
+}
+
+.print.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media print {
+  .button {
+    display: none;
+  }
+}
+
 /* Displaying it nice */
 
 body {
@@ -20,7 +41,7 @@ body {
     width: 8.5in;
     box-shadow: 0 5px 20px gray;
     margin: 40px auto;
-    padding: 0 10px;
+    padding: 10px;
   }
 }
 
@@ -30,12 +51,16 @@ body {
     text-decoration: none;
   }
 
-  .education.section-title {
-    margin-bottom: 30px;
+  body {
+    font-size: 10pt;
   }
 }
 
 /* Name */
+
+.name {
+  display: inline-block;
+}
 
 h1.name {
   font-size: 40pt;
@@ -68,6 +93,12 @@ h3 {
 
 p {
   margin: 0;
+}
+
+@media print {
+  div.contact-information {
+    font-size: 9pt;
+  }
 }
 
 /* Summary */
@@ -134,4 +165,10 @@ ul.skills {
 .project {
   width: 49%;
   display: inline-block;
+}
+
+@media print {
+  body {
+    font-size: 9pt;
+  }
 }
