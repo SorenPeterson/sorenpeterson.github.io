@@ -34,6 +34,7 @@ body {
 
 .container {
   background-color: white;
+  padding: 10px;
 }
 
 @media not print {
@@ -41,7 +42,6 @@ body {
     width: 8.5in;
     box-shadow: 0 5px 20px gray;
     margin: 40px auto;
-    padding: 10px;
   }
 }
 
@@ -170,5 +170,9 @@ ul.skills {
 @media print {
   body {
     font-size: 9pt;
+  }
+
+  .projects.list {
+    margin: 0;
   }
 }
