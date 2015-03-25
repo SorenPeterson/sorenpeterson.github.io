@@ -2,16 +2,23 @@
 
 body {
   font-family: 'Lora', serif;
+  font-size: 10pt;
 }
 
 /* Displaying it nice */
 
+body {
+  background-color: #ddd;
+}
+
+.container {
+  background-color: white;
+}
+
 @media not print {
   .container {
     width: 8.5in;
-    height: 11in;
-    box-shadow: 10px 10px 10px gray;
-    border: 1px solid black;
+    box-shadow: 0 5px 20px gray;
     margin: 40px auto;
     padding: 0 10px;
   }
@@ -22,6 +29,10 @@ body {
     color: black;
     text-decoration: none;
   }
+
+  .education.section-title {
+    margin-bottom: 30px;
+  }
 }
 
 /* Name */
@@ -29,17 +40,22 @@ body {
 h1.name {
   font-size: 40pt;
   margin: 0;
+  float: left;
+}
+
+h3.name {
+  float: left;
+  clear: left;
 }
 
 /* Contact Information */
 
 p.contact-information {
   margin: 0;
-  text-align: center;
 }
 
 div.contact-information {
-
+  text-align: right;
 }
 
 h2.section-title {
@@ -89,7 +105,7 @@ p.summary {
 
 .school.section-title {
   display: block;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
 }
 
 /* Skills */
@@ -102,4 +118,20 @@ p.summary {
 ul.skills {
   display: inline-block;
   margin: 0;
+}
+
+/* Projects */
+
+.projects.link {
+  float: right;
+  margin: 0;
+}
+
+.projects.list {
+  margin: 5px;
+}
+
+.project {
+  width: 49%;
+  display: inline-block;
 }
