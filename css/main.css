@@ -13,3 +13,10 @@ body {
     box-shadow: 0 3px 10px black;
     border-radius: 100%;
 }
+
+pre {
+    text-align: center;
+    font-size: 4px;
+    font-weight: bolder;
+    text-shadow: 0 0 10px black;
+}
