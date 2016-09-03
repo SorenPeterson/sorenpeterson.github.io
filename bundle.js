@@ -52,13 +52,13 @@
 
 	var _reactDom = __webpack_require__(35);
 
+	var _App = __webpack_require__(175);
+
+	var _App2 = _interopRequireDefault(_App);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(
-	    'h3',
-	    null,
-	    'Soren Peterson'
-	), document.getElementById('root'));
+	(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ },
 /* 1 */
@@ -21485,6 +21485,170 @@
 	var ReactMount = __webpack_require__(167);
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Background = __webpack_require__(176);
+
+	var _Background2 = _interopRequireDefault(_Background);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var App = function App() {
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'app', style: { height: '10vh' } },
+	        _react2.default.createElement(_Background2.default, null)
+	    );
+	};
+
+	exports.default = App;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Attractor = function () {
+	    function Attractor(a, b, c, d) {
+	        _classCallCheck(this, Attractor);
+
+	        this.a = a;
+	        this.b = b;
+	        this.c = c;
+	        this.d = d;
+	        this.x = 0;
+	        this.y = 0;
+	    }
+
+	    _createClass(Attractor, [{
+	        key: 'next',
+	        value: function next() {
+	            var x = this.x;
+	            var y = this.y;
+
+	            x = Math.sin(this.a * this.y) - Math.cos(this.b * this.x);
+	            y = Math.sin(this.c * this.x) - Math.cos(this.d * this.y);
+	            this.x = x;
+	            this.y = y;
+	            return { x: x, y: y };
+	        }
+	    }]);
+
+	    return Attractor;
+	}();
+
+	var Background = function (_Component) {
+	    _inherits(Background, _Component);
+
+	    function Background() {
+	        _classCallCheck(this, Background);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this));
+
+	        var _Array$fill$map = Array(4).fill(function () {
+	            var num = Math.random() * 1000;
+	            return function () {
+	                return Math.sin(new Date() / num);
+	            };
+	        }).map(function (f) {
+	            return f();
+	        });
+
+	        var _Array$fill$map2 = _slicedToArray(_Array$fill$map, 4);
+
+	        var a = _Array$fill$map2[0];
+	        var b = _Array$fill$map2[1];
+	        var c = _Array$fill$map2[2];
+	        var d = _Array$fill$map2[3];
+
+
+	        _this.attractor = new Attractor(a(), b(), c(), d());
+	        setInterval(function () {
+	            _this.attractor = new Attractor(a(), b(), c(), d());
+	        }, 0);
+	        return _this;
+	    }
+
+	    _createClass(Background, [{
+	        key: 'renderCanvas',
+	        value: function renderCanvas(canvas) {
+	            var _this2 = this;
+
+	            var context = canvas.getContext('2d');
+	            var width = canvas.width;
+	            var height = canvas.height;
+
+	            var imageData = context.getImageData(0, 0, width, height);
+	            for (var i = 0; i < imageData.data.length / 4; i++) {
+	                imageData.data[i * 4 + 3] -= 1;
+	            }
+	            for (var _i = 0; _i < 10000; _i++) {
+	                var _attractor$next = this.attractor.next();
+
+	                var x = _attractor$next.x;
+	                var y = _attractor$next.y;
+
+	                x = Math.floor((x + 2) / 4 * width);
+	                y = Math.floor((y + 2) / 4 * height);
+	                var location = x * width * 4 + y * 4;
+	                imageData.data[location++]--;
+	                imageData.data[location++]--;
+	                imageData.data[location++]--;
+	                imageData.data[location++] = 255;
+	            }
+	            context.putImageData(imageData, 0, 0);
+	            setTimeout(function () {
+	                _this2.renderCanvas(canvas);
+	            }, 3);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement('canvas', {
+	                ref: this.renderCanvas.bind(this),
+	                width: '600', height: '600'
+	            });
+	        }
+	    }]);
+
+	    return Background;
+	}(_react.Component);
+
+	exports.default = Background;
 
 /***/ }
 /******/ ]);
