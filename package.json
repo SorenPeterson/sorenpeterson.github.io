@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/SorenPeterson/sorenpeterson.github.io/issues"
   },
-  "homepage": "https://github.com/SorenPeterson/sorenpeterson.github.io#readme"
+  "homepage": "https://github.com/SorenPeterson/sorenpeterson.github.io#readme",
+  "dependencies": {
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.22.0"
+  }
 }
